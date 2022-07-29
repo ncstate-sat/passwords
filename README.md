@@ -5,6 +5,8 @@ A package to interface with the Passwordstate API to retrieve passwords.
 ## Setup
 Install dependencies in requirements.txt
 
+Import the package with `import passwords`
+
 Initialize an object with the api base url and the api key:
 - api_base_url (str): the base url of the Passwordstate api
 - api_key (str): the api secret key

@@ -1,8 +1,0 @@
-README.md
-passwords.py
-setup.py
-Passwords.egg-info/PKG-INFO
-Passwords.egg-info/SOURCES.txt
-Passwords.egg-info/dependency_links.txt
-Passwords.egg-info/not-zip-safe
-Passwords.egg-info/top_level.txt

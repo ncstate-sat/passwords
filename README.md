@@ -34,3 +34,10 @@ or
 pw_lookup.get_pw_list(5678)
 # returns a list of dictionaries including passwords for the password list with id 5678
 ```
+
+## Install Package
+
+```bash
+# install `passwords` locally with pip
+$ pip install .
+```

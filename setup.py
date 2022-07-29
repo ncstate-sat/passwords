@@ -1,7 +1,7 @@
 # setup.py
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from setuptools import setup
+from setuptools import setup, find_packages
 setup(
     author="SAT",
     classifiers=[
@@ -12,6 +12,7 @@ setup(
     license="MIT license",
     include_package_data=True,
     name='Passwords',
+    packages=['passwords.py'],
     version='0.1.0',
     zip_safe=False,
 )

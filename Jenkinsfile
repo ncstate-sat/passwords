@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        API_TOKEN = credentials('pypi_api_token')
+        API_TOKEN = credentials('jenkins-pypi-api-token')
     }
 
     stages {
@@ -11,7 +11,7 @@ pipeline {
                 sh "python3.9 -m pip install -U build"
                 sh "python3.9 -m build"
                 sh "python3.9 -m pip install -U twine"
-                sh 'python3.9 -m twine upload --repository testpypi dist/\* -u%__token__% -p%API_TOKEN%'
+                sh("python3.9 -m twine upload --repository testpypi dist/* -u%PYPI_API_TOKEN_USR% -p%PYPI_API_TOKEN_PSW")
             }
         }
     }

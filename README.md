@@ -19,7 +19,7 @@ pw_lookup = passwords.PasswordstateLookup(
 ```
 
 ## Usage
-Use the object's methods to find passwords. eg:
+### Use the object's methods to find passwords. eg:
 ```python
 pw_lookup.get_pw_by_title(5678, "my_password_title")
 # returns the password with the given title in the given password list, as a string
@@ -33,4 +33,15 @@ or
 ```python
 pw_lookup.get_pw_list(5678)
 # returns a list of dictionaries including passwords for the password list with id 5678
+```
+
+### Retrieve the username and password for a given account by its ID or title:
+```python
+pw_lookup.get_login_by_title(5678, "my_password_title")
+# returns a dictionary with the username and password for the account with the given title in the given password list
+```
+or
+```python
+pw_lookup.get_login(1234)
+# returns a dictionary with the username and password for the account with id 1234
 ```

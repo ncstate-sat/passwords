@@ -3,8 +3,8 @@ requires = ["flit_core>=3.2"]
 build-backend = "flit_core.buildapi"
 
 [project]
-name = "password-state-client"
-version = "0.0.2"
+name = "password_state_client"
+version = "1.0.0"
 authors = [
   { name="Ryan Semmler", email="rsemmle@ncsu.edu" },
 ]
@@ -19,3 +19,6 @@ classifiers = [
 
 [project.urls]
 "Homepage" = "https://github.com/ncstate-sat/passwords"
+
+[tool.flit.module]
+name = "passwords"

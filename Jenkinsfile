@@ -19,7 +19,7 @@ pipeline {
         
         stage('Build') {
             steps {
-                sh 'flit build'
+                sh 'python3 -m build ./passwords'
             }
         }
 
@@ -31,7 +31,7 @@ pipeline {
                     passwordVariable: 'PYPI_PASSWORD'
                 )]) {
                     sh 'python3 -m pip install -U twine'
-                    sh 'python3 -m twine upload dist/\\* -u$PYPI_USERNAME -p$PYPI_PASSWORD'
+                    sh 'python3 -m twine upload ./passwords/dist/\\* -u$PYPI_USERNAME -p$PYPI_PASSWORD'
                 }
             }
         }

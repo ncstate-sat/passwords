@@ -30,7 +30,7 @@ pipeline {
         stage('Push') {
             steps {
                 withCredentials([usernamePassword(
-                    credentialsId: 'jenkins-pypi-api-token',
+                    credentialsId: 'sat-pypi-private-api-token',
                     usernameVariable: 'PYPI_USERNAME',
                     passwordVariable: 'PYPI_PASSWORD'
                 )]) {

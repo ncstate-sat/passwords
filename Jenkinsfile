@@ -7,6 +7,10 @@ pipeline {
         // This is required if you want to clean before build
         skipDefaultCheckout(true)
     }
+
+    environment {
+        TWINE_REPOSITORY_URL = "https://pypi.ehps.ncsu.edu"
+    }
     
     stages {
         stage('Clone') {
